@@ -1,5 +1,6 @@
 //
 //  UIView+EasyFrame.m
+//  我的网易彩票
 //
 //  Created by 张 锐 on 15/6/14.
 //  Copyright (c) 2015年 张 锐. All rights reserved.
@@ -48,6 +49,55 @@
     frame.size.height = height;
     self.frame = frame;
 }
+
+
+- (void)setCenterX:(CGFloat)centerX{
+    CGPoint point = self.center;
+    point.x = centerX;
+    self.center = point;
+}
+
+- (CGFloat)centerX{
+    return self.center.x;
+}
+
+- (void)setCenterY:(CGFloat)centerY{
+    CGPoint point = self.center;
+    point.y = centerY;
+    self.center = point;
+}
+
+- (CGFloat)centerY{
+    return self.center.y;
+}
+
+- (void)setSize:(CGSize)size{
+    CGRect frame = self.frame;
+    frame.size = size;
+    self.frame = frame;
+}
+
+
+- (CGSize)size{
+    return self.frame.size;
+}
+
+-(CGFloat)maxX{
+    return CGRectGetMaxX(self.frame);
+}
+
+-(CGFloat)maxY{
+    return CGRectGetMaxY(self.frame);
+}
+
+-(CGFloat)self_midX{
+    return self.frame.size.width * 0.5;
+}
+
+-(CGFloat)self_midY{
+    return self.frame.size.height * 0.5;
+}
+
 
 
 
